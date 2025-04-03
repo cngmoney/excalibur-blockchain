@@ -26,3 +26,6 @@ validators:
   bonded: 200000000stake
 - name: validator3
   bonded: 300000000stake
+build:
+  main: ./cmd/excaliburd
+
