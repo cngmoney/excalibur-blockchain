@@ -1,0 +1,17 @@
+syntax = "proto3";
+package excalibur.excalibur;
+
+import "amino/amino.proto";
+import "gogoproto/gogo.proto";
+import "excalibur/excalibur/params.proto";
+
+option go_package = "excalibur/x/excalibur/types";
+
+// GenesisState defines the excalibur module's genesis state.
+message GenesisState {
+  // params defines all the parameters of the module.
+  Params params = 1 [
+    (gogoproto.nullable) = false,
+    (amino.dont_omitempty) = true
+  ];
+}
